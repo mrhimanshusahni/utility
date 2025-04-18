@@ -1,4 +1,8 @@
+// External Dependencies
 import type { MetaFunction } from "@remix-run/node";
+
+// Internal Dependencies
+import Loader from "../components/loader";
 
 export const meta: MetaFunction = () => {
   return [
@@ -28,11 +32,10 @@ export default function Index() {
             />
           </div>
         </header>
-        <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
-          <p className="leading-6 text-gray-700 dark:text-gray-200">
-            What&apos;s next?
-          </p>
-        </nav>
+
+        <Loader />
+        <Loader speed="slow" />
+        <Loader speed="fast" />
       </div>
     </div>
   );
