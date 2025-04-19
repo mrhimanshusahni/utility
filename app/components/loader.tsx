@@ -17,7 +17,11 @@ interface Loader extends React.ComponentProps<"svg"> {
 const Loader = ({ className, speed = "default" }: Loader) => {
   return (
     <svg
-      className={cn("size-5 text-slate-600", className)}
+      className={cn(
+        "size-5 text-slate-600",
+        { "animate-spin": !speed },
+        className,
+      )}
       style={{ animation: `spin ${SpeedTiming[speed]} linear infinite` }}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
