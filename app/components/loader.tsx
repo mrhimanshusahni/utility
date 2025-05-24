@@ -1,5 +1,5 @@
 // Internal Dependencies
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 enum SpeedTiming {
   normal = "0.9s",
