@@ -68,15 +68,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         "solid-outline-full":
-          "rounded-full bg-blue-500 text-white hover:outline-2 hover:outline-offset-2 hover:outline-blue-500 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-600 active:outline-2 active:outline-offset-2 active:outline-blue-600 ",
+          "rounded-full bg-blue-500 text-white hover:outline-2 hover:outline-offset-2 hover:outline-blue-500 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-600 active:outline-2 active:outline-offset-2 active:outline-blue-600",
         "solid-rounded-full":
-          "rounded-full bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500",
+          "rounded-full bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:focus:outline-none",
         "solid-rounded":
-          "rounded-md bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500",
+          "rounded-md bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:focus:outline-none",
         "outline-full":
-          "rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500",
+          "rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:focus:outline-none",
         "outline-rounded":
-          "rounded-md border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500",
+          "rounded-md border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:focus:outline-none",
       },
     },
     defaultVariants: {
