@@ -28,7 +28,11 @@ const CustomButton = ({
   className,
   isButtonLoading,
   isOverRideDefaultClasses = false,
-  title = buttonLoadingText ? buttonLoadingText : children?.toString(),
+  title = isButtonLoading
+    ? buttonLoadingText
+      ? buttonLoadingText
+      : children?.toString()
+    : children?.toString(),
   type = "button",
   variant = "solid-outline-full",
   ...restProps
