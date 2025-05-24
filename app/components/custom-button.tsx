@@ -8,32 +8,37 @@ import { cn } from "@/lib/utils";
 
 interface Button extends React.ComponentProps<"button"> {
   variant?:
+    | "outline-full"
+    | "outline-rounded"
     | "solid-outline-full"
     | "solid-rounded-full"
-    | "solid-rounded"
-    | "outline-full"
-    | "outline-rounded";
-  isButtonLoading?: boolean;
-  buttonLoadingText?: string;
+    | "solid-rounded";
   buttonLoaderClassName?: React.ComponentProps<"svg">["className"];
   buttonLoaderSpeed?: "normal" | "slow" | "fast" | "default";
+  buttonLoadingText?: string;
+  isButtonLoading?: boolean;
+  isOverRideDefaultClasses?: boolean;
 }
 
 const CustomButton = ({
-  className,
-  children,
-  variant = "solid-outline-full",
-  isButtonLoading,
-  buttonLoadingText,
   buttonLoaderClassName,
   buttonLoaderSpeed = "default",
-  type = "button",
+  buttonLoadingText,
+  children,
+  className,
+  isButtonLoading,
+  isOverRideDefaultClasses = false,
   title = buttonLoadingText ? buttonLoadingText : children?.toString(),
+  type = "button",
+  variant = "solid-outline-full",
   ...restProps
 }: Button) => {
   return (
     <button
-      className={cn(buttonVariants({ variant }), className)}
+      className={cn(
+        isOverRideDefaultClasses ? className : buttonVariants({ variant }),
+        className,
+      )}
       type={type}
       title={title}
       {...restProps}
